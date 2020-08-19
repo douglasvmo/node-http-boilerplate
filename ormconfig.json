@@ -1,0 +1,18 @@
+{
+   "type": "mysql",
+   "host": "i5x1cqhq5xbqtv00.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+   "port": 3306,
+   "username": "yuk4zit3vmzadtug",
+   "password": "mp09vchp06hnkriw",
+   "database": "tl4m0kldwns2jlt3",
+   "entities": [
+      "src/app/model/*.ts"
+   ],
+   "migrations": [
+      "src/database/migration/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/app/model/",
+      "migrationsDir": "src/database/migration/"
+   }
+}
