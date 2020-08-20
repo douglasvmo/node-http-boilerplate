@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;");
+:root {
+    --colot-background: #f1faee;
+    --color-primary-light: #a8dadc;
+    --color-line-in-white: #caf0f8;
+    --color-input-background: #caf0f8;
+    --color-text-primary: #03071e;
+    --color-text-secundary: #023e8a;
+    --color-button: #0096c7;
+
+    font-size: 60%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body,
+#root {
+        height: 100vh; 
+        background-color: var(--colot-background); 
+}
+body,
+input,
+button,
+textarea {
+  font: 500 2.3rem Roboto;
+
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+
+}
+.container .welcome {
+    height: 40rem;
+    
+}
+@media(min-width: 700px ){
+  :root {
+      font-size: 45%;
+  }
+}
