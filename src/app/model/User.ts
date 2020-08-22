@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('users')
 export default class User {
@@ -9,8 +9,8 @@ export default class User {
     username: string;
 
     @Column()
-    email: string
+    email: string;
 
     @Column()
-    password: string
+    password: string;
 }

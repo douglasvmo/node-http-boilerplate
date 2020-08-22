@@ -6,16 +6,13 @@ import passaport from './app/controller/SessionControler'
 
 const app = express()
 
-
-
-
-
 app.set('views', __dirname + '/app/views')
 app.set('view engine', 'tsx')
 app.engine('tsx', require('express-react-views').createEngine())
 
 app.use(express.static(__dirname + '/app/public'))
 
+app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 app.use(passaport.initialize())
 app.use(passaport.session())
 

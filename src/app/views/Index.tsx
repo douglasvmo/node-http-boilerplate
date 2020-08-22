@@ -3,7 +3,7 @@ import * as React from 'react';
 
 
 interface IndexProps {
-    msg: string
+    failureMessage?: string
 }
 
 const Login: React.FunctionComponent<IndexProps> = (props) => {
@@ -20,20 +20,20 @@ const Login: React.FunctionComponent<IndexProps> = (props) => {
                     <div className="welcome">
                         <p>Welcome</p>
                     </div>
-                    <form action='/login' method='post'>
+                    <form method="POST" action="/login">
                         <fieldset>
-                            <legend>login</legend>
+                            <legend>Login</legend>
+                            <p>{props.failureMessage}</p>
                             <div className="input-block">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" id="email" required />
+                                <input type="text" name="email" />
                             </div>
                             <div className="input-block">
                                 <label htmlFor="password">Password</label>
-                                <input type="text" id="password" required />
+                                <input type="text" name="password" />
                             </div>
                         </fieldset>
                         <div className="button-container">
-                            <a href="/signin" className="signin">Sign In</a>
                             <input type="submit" />
                         </div>
                     </form>

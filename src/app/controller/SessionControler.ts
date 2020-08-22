@@ -1,9 +1,37 @@
-import * as passaport from 'passport'
+import * as passport from 'passport'
+import { getRepository } from 'typeorm'
+import User from '../model/User'
 import { Strategy } from 'passport-local'
-import { Request, Response } from 'express'
 
-passaport.use(new Strategy(function (username, passaword, cb) {
+
+
+passport.use(new Strategy({
+    usernameField: 'email',
+    passwordField: "password"
+}, async function (email, password, cb) {
+    const userRepository = getRepository(User);
+    console.log({ email, password })
+
+    const user = await userRepository.findOne({ where: { email } })
+
+    if (!user) {
+        return cb(null, false, { message: 'Incorrect username.' });
+    }
+    const isValidPassword = user.password === password
+    if (!isValidPassword) {
+        return cb(null, false, { message: 'Incorrect password.' });
+    }
+
+    return cb(null, true)
 
 }))
 
-export default passaport 
+passport.serializeUser(function (user, done) {
+    done(null, user);
+});
+
+passport.deserializeUser(function (user, done) {
+    done(null, user);
+});
+
+export default passport;
