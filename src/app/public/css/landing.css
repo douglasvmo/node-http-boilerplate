@@ -1,9 +1,17 @@
 #landing-page form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
     margin: 0 auto;
-    height: 20rem;
-    width: 30rem;
+    width: 35rem;
+    border-radius: 1rem;
+    background: var(--color-primary-light);
+    box-shadow: 0.1rem 0.3rem 0.5rem gray;
+
+    position: relative;
+    z-index: 1;
+    
 }
 #landing-page form fieldset {
     border: 0 ;
@@ -12,6 +20,7 @@
   font-size: 3.2rem;
   text-align: center;
   text-transform: capitalize;
+  color: var(--color-text-primary);
 }
 .input-block{
   margin-top: 1.2rem;
@@ -45,13 +54,14 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin-top: 2.5rem;
 }
 .button-container .signin {
     text-align: center;
     text-decoration: none;
     color: var(--color-text-primary);
-    font: 500 1.6rem Archivo;
-    margin: 1.6rem 0 2rem;
+    font: 500 1.7rem Roboto;
+    margin-bottom: 1rem;
     transform: color 0.2s;
 }
 .button-container .signin:hover{
@@ -66,6 +76,6 @@
     cursor: pointer;
     border-radius: 0.4rem;
     box-shadow: 0.2rem 0.6rem 0.8rem rgba(0,0,0,0.2);
-    font: 500 2rem Archivo ;
+    font: 500 2rem Roboto ;
     color: var(--color-line-in-white);
 }

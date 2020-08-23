@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/landing.css" />
+</head>
+
+<body>
+    <div id="root">
+        <main class="container" id="landing-page">
+            <div class="welcome">
+                <p>Welcome</p>
+            </div>
+            <form method="POST" action="/login">
+                <fieldset>
+                    <legend>Login</legend>
+                    <div class="input-block">
+                        <label htmlFor="email">Email</label>
+                        <input type="text" name="email" />
+                    </div>
+                    <div class="input-block">
+                        <label htmlFor="password">Password</label>
+                        <input type="text" name="password" />
+                    </div>
+                </fieldset>
+                <div class="button-container">
+                    <a href="/signin" class="signin">Sign In</a>
+                    <input type="submit" value="Enter" />
+                </div>
+            </form>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

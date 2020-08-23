@@ -1,7 +1,7 @@
-import { Request, Response, response } from 'express';
+import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid'
-import User from '../model/User';
+import User from '../../model/User';
 
 
 

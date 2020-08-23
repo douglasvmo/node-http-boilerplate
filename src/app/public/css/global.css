@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
-    --colot-background: #f1faee;
-    --color-primary-light: #a8dadc;
+    --colot-background-primary: #89b0ae;
+    --colot-background-secundary: #f1faee;
+    --color-primary-light: #f1faee;
     --color-line-in-white: #caf0f8;
-    --color-input-background: #caf0f8;
-    --color-text-primary: #03071e;
+    --color-input-background: #d4f8ffdc;
+    --color-text-primary: #555b6e;
     --color-text-secundary: #023e8a;
     --color-button: #0096c7;
 
@@ -20,22 +21,34 @@ html,
 body,
 #root {
         height: 100vh; 
-        background-color: var(--colot-background); 
+        background-color: var(--colot-background-secundary);    
+}
+#root::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 50vh;
+    width: 100vw;
+    background-color: var(--colot-background-primary);
 }
 body,
 input,
 button,
 textarea {
-  font: 500 2.3rem Roboto;
+  font: 500 1.8rem Roboto;
 
 }
 .container {
     width: 100vw;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
 }
 .container .welcome {
-    height: 40rem;
+
     
 }
 @media(min-width: 700px ){

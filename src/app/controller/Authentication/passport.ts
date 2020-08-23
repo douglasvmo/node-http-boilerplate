@@ -1,8 +1,7 @@
 import * as passport from 'passport'
 import { getRepository } from 'typeorm'
-import User from '../model/User'
+import User from '../../model/User'
 import { Strategy } from 'passport-local'
-
 
 
 passport.use(new Strategy({
@@ -10,7 +9,6 @@ passport.use(new Strategy({
     passwordField: "password"
 }, async function (email, password, cb) {
     const userRepository = getRepository(User);
-    console.log({ email, password })
 
     const user = await userRepository.findOne({ where: { email } })
 
@@ -34,4 +32,6 @@ passport.deserializeUser(function (user, done) {
     done(null, user);
 });
 
-export default passport;
+
+
+export { passport }
